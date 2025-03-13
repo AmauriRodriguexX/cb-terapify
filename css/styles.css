@@ -198,7 +198,7 @@ h1 {
 }
 
 h2 {
-     font-weight: semibold;
+     font-weight: 500;
      font-size: 32px;
      margin-bottom: 24px;
 }
@@ -225,8 +225,7 @@ h2 {
 
 
 h3 {
-     font-weight: 600;
-     /* SemiBold */
+     font-weight: 500;
 }
 
 h4 {
@@ -263,10 +262,10 @@ span {
 /* Estilos para dispositivos móviles (máximo 768px de ancho) */
 @media (max-width: 768px) {
      .flow-text-p {
-         font-size: 16px;
-         line-height: 29px;
+          font-size: 16px;
+          line-height: 29px;
      }
- }
+}
 
 /* Para pantallas móviles */
 @media (max-width: 768px) {
@@ -308,7 +307,7 @@ section:not(:last-child)::after {
      content: "";
      display: block;
      border-top: 4px solid #F6F6F6;
-   }
+}
 
 .logo {
      max-width: 180px;
@@ -421,6 +420,7 @@ section:not(:last-child)::after {
      color: #FFFFFF;
      transition: 0.3s;
 }
+
 .button:hover {
      background: #960048;
 }
@@ -1101,7 +1101,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 .footer-link:hover {
      color: #960048;
- }
+}
 
 
 /* Quitar el comportamiento fijo en móviles */
@@ -1183,8 +1183,8 @@ input[type=number]::-webkit-inner-spin-button {
 
 .text-start {
      text-align: left !important;
-   }
-   
+}
+
 
 /* En móviles se alinea a la izquierda */
 @media (max-width: 768px) {
@@ -1241,9 +1241,9 @@ input[type=number]::-webkit-inner-spin-button {
      border: 1px solid transparent !important;
 }
 
-.accordion-body p{
+.accordion-body p {
      font-size: 14px;
- }
+}
 
 .custom-accordion-button {
      display: flex;
@@ -1256,6 +1256,17 @@ input[type=number]::-webkit-inner-spin-button {
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
      color: #000;
 }
+
+.custom-accordion-button .step-toggle-icon {
+     transition: transform 0.3s ease;
+     /* Transición para suavizar la rotación */
+}
+
+.custom-accordion-button:not(.collapsed) .step-toggle-icon {
+     transform: rotate(45deg);
+     /* Rota 45° cuando está abierto */
+}
+
 
 .custom-accordion-button::after {
      display: none;
@@ -1320,3 +1331,19 @@ input[type=number]::-webkit-inner-spin-button {
 .mt-40 {
      margin-top: 40px;
 }
+
+.p-text-14 {
+     font-size: 14px;
+}
+
+.w-150 {
+     width: 150px;
+}
+
+@media (min-width: 576px) {
+     .modal-dialog {
+         max-width: 50%;
+         margin-right: auto;
+         margin-left: auto;
+     }
+ }
