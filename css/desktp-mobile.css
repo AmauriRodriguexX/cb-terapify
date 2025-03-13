@@ -132,21 +132,27 @@
 /* ---- BOTONES PREV/NEXT ---- */
 .carousel-control-prev,
 .carousel-control-next {
-     /* Quitamos la posición absoluta y lo ajustamos al contenedor flex */
-     position: static;
-     background: transparent;
-     border: none;
-     outline: none;
-     /* Tamaño circular */
-     width: 40px;
-     height: 40px;
-     border-radius: 50%;
-     /* Centramos el ícono */
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     /* Margen horizontal para separar los botones */
-     margin: 0 0.5rem;
+    position: static;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0.5rem;
+}
+
+/* Ajustamos el tamaño y alineación del ícono */
+.carousel-control-prev .material-symbols-outlined,
+.carousel-control-next .material-symbols-outlined {
+    font-size: 15px; /* Tamaño del icono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 8px;
 }
 
 .carousel-control-prev {

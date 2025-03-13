@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function () {
       prevBtn.style.backgroundColor = "#D8DADA";
       prevBtn.style.color = "#5E6A71";
       prevBtn.style.pointerEvents = "none";
-      prevBtn.style.opacity = "0.5";
     } else {
       // Activo
       prevBtn.style.backgroundColor = "#CE0058";
@@ -62,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function () {
       nextBtn.style.backgroundColor = "#D8DADA";
       nextBtn.style.color = "#5E6A71";
       nextBtn.style.pointerEvents = "none";
-      nextBtn.style.opacity = "0.5";
     } else {
       // Activo
       nextBtn.style.backgroundColor = "#CE0058";
