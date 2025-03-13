@@ -156,7 +156,7 @@
 
 .carousel-control-next {
      background-color: #CE0058;
-     color: #FFFFFF;
+     color: #FFFFFF !important;
 }
 
 .carousel-control-prev.disabled,
@@ -170,11 +170,12 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-     filter: invert(100%);
-     background-size: 20px 20px;
-     background-repeat: no-repeat;
-     
+  /* filter: invert(100%);  */
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
 }
+
+
 
 
 @media (max-width: 768px) {

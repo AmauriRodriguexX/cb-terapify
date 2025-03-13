@@ -129,15 +129,14 @@
 
 @font-face {
      font-family: 'Material Symbols Outlined';
-     src: url('../assets/fonts/MaterialSymbolsOutlined.woff2') format('woff2');
+     src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v230/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1v-p_4MrImHCIJIZrDCvHOej.woff2) format('woff2');
      font-weight: normal;
      font-style: normal;
 }
 
 
-
 .material-symbols-outlined {
-     font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+     font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
      font-family: 'Material Symbols Outlined';
      font-weight: normal;
      font-style: normal;
@@ -195,21 +194,34 @@ h1 {
      font-style: normal;
      font-weight: 700;
      line-height: normal;
+     margin-bottom: 24px;
 }
 
 h2 {
-     font-weight: bold;
-     font-size: 48px;
+     font-weight: semibold;
+     font-size: 32px;
+     margin-bottom: 24px;
 }
 
 /* Estilos para mobile */
 @media (max-width: 768px) {
 
-     h1,
-     h2 {
-          font-size: 24px;
+     h1 {
+          font-size: 32px;
+          margin-bottom: 16px;
      }
 }
+
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+
+     h2 {
+          font-size: 24px;
+          margin-bottom: 16px;
+     }
+}
+
 
 
 h3 {
@@ -231,12 +243,12 @@ h5 {
 p,
 span {
      font-family: 'Inter', sans-serif;
-     color: #625C5C;
+     color: #252A2D;
      font-family: Inter;
      font-size: 18px;
      font-style: normal;
      font-weight: 400;
-     line-height: normal;
+     line-height: 28px;
      letter-spacing: 0px;
 }
 
@@ -245,8 +257,16 @@ span {
      color: #252A2D;
      font-size: 24px;
      letter-spacing: 0px;
-     line-height: 1.5;
+     line-height: 40px;
 }
+
+/* Estilos para dispositivos móviles (máximo 768px de ancho) */
+@media (max-width: 768px) {
+     .flow-text-p {
+         font-size: 16px;
+         line-height: 29px;
+     }
+ }
 
 /* Para pantallas móviles */
 @media (max-width: 768px) {
@@ -282,6 +302,13 @@ span.thin {
      text-align: center;
      height: 72px;
 }
+
+
+section:not(:last-child)::after {
+     content: "";
+     display: block;
+     border-top: 4px solid #F6F6F6;
+   }
 
 .logo {
      max-width: 180px;
@@ -390,15 +417,12 @@ span.thin {
      text-align: center;
      border: none;
      cursor: not-allowed;
-     background: #EDECF0;
-     color: #83786F;
-     transition: 0.3s;
-}
-
-.button.active {
      background: #CA0059;
      color: #FFFFFF;
-     cursor: pointer;
+     transition: 0.3s;
+}
+.button:hover {
+     background: #960048;
 }
 
 
@@ -443,6 +467,11 @@ span.thin {
      background: #ffffff;
      color: #CA0059;
      transition: 0.3s;
+}
+
+.button-low:hover {
+     border: 1px solid #960048;
+     color: #960048;
 }
 
 @media (max-width: 767px) {
@@ -1070,6 +1099,10 @@ input[type=number]::-webkit-inner-spin-button {
      text-decoration: underline;
 }
 
+.footer-link:hover {
+     color: #960048;
+ }
+
 
 /* Quitar el comportamiento fijo en móviles */
 @media (max-width: 767px) {
@@ -1277,4 +1310,13 @@ input[type=number]::-webkit-inner-spin-button {
      background-color: #fdfdfd;
      /* o el color que desees */
      box-shadow: none;
+}
+
+
+.cursor-p {
+     cursor: pointer;
+}
+
+.mt-40 {
+     margin-top: 40px;
 }

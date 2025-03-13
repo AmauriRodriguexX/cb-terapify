@@ -27,55 +27,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-
-document.getElementById('cardsCarousel').addEventListener('slid.bs.carousel', function (event) {
-  const items = this.querySelectorAll('.carousel-item');
-  const activeIndex = [...items].indexOf(this.querySelector('.carousel-item.active'));
-  const prevBtn = this.querySelector('.carousel-control-prev');
-  const nextBtn = this.querySelector('.carousel-control-next');
-  
-  // Si estamos en el primer slide
-  if (activeIndex === 0) {
-    prevBtn.classList.add('disabled');
-  } else {
-    prevBtn.classList.remove('disabled');
-  }
-
-  // Si estamos en el último slide
-  if (activeIndex === items.length - 1) {
-    nextBtn.classList.add('disabled');
-  } else {
-    nextBtn.classList.remove('disabled');
-  }
-});
-
-// Función para cerrar el modal cuyo id se pasa como parámetro
-function closeModal(modalId) {
-  var modalEl = document.getElementById(modalId);
-  // Obtiene o crea la instancia del modal con Bootstrap
-  var modalInstance = bootstrap.Modal.getOrCreateInstance(modalEl);
-  modalInstance.hide();
-}
-
-
-
 document.addEventListener('DOMContentLoaded', function () {
-  var accordion = document.getElementById('accordionExample');
+  const carousel = document.getElementById('cardsCarousel');
+  if (!carousel) return;
+  
+  // Seleccionamos los botones (suponiendo que están en el documento)
+  const prevBtn = document.querySelector('.carousel-control-prev');
+  const nextBtn = document.querySelector('.carousel-control-next');
 
-  // Al expandir un panel
-  accordion.addEventListener('show.bs.collapse', function (e) {
-    var toggleIcon = e.target.previousElementSibling.querySelector('.step-toggle-icon');
-    if (toggleIcon) {
-      toggleIcon.classList.add('rotated');
-    }
-  });
+  // Función que actualiza el estilo de los botones según el slide activo
+  function updateButtons() {
+    const items = carousel.querySelectorAll('.carousel-item');
+    const activeSlide = carousel.querySelector('.carousel-item.active');
+    const activeIndex = Array.from(items).indexOf(activeSlide);
 
-  // Al colapsar un panel
-  accordion.addEventListener('hide.bs.collapse', function (e) {
-    var toggleIcon = e.target.previousElementSibling.querySelector('.step-toggle-icon');
-    if (toggleIcon) {
-      toggleIcon.classList.remove('rotated');
+    // Para el botón Prev:
+    if (activeIndex === 0) {
+      // Deshabilitado
+      prevBtn.style.backgroundColor = "#D8DADA";
+      prevBtn.style.color = "#5E6A71";
+      prevBtn.style.pointerEvents = "none";
+      prevBtn.style.opacity = "0.5";
+    } else {
+      // Activo
+      prevBtn.style.backgroundColor = "#CE0058";
+      prevBtn.style.color = "#FFFFFF";
+      prevBtn.style.pointerEvents = "auto";
+      prevBtn.style.opacity = "1";
     }
-  });
+
+    // Para el botón Next:
+    if (activeIndex === items.length - 1) {
+      // Deshabilitado
+      nextBtn.style.backgroundColor = "#D8DADA";
+      nextBtn.style.color = "#5E6A71";
+      nextBtn.style.pointerEvents = "none";
+      nextBtn.style.opacity = "0.5";
+    } else {
+      // Activo
+      nextBtn.style.backgroundColor = "#CE0058";
+      nextBtn.style.color = "#FFFFFF";
+      nextBtn.style.pointerEvents = "auto";
+      nextBtn.style.opacity = "1";
+    }
+  }
+
+  // Actualizamos al cargar la página
+  updateButtons();
+
+  // Actualizamos cuando se cambia de slide (evento de Bootstrap)
+  carousel.addEventListener('slid.bs.carousel', updateButtons);
 });
+
