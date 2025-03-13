@@ -239,8 +239,7 @@ h5 {
      font-size: 14px;
 }
 
-p,
-span {
+p {
      font-family: 'Inter', sans-serif !important;
      color: #252A2D;
      font-family: Inter;
@@ -250,6 +249,13 @@ span {
      line-height: 28px;
      letter-spacing: 0px;
 }
+
+@media (max-width: 768px) {
+     p {
+         font-size: 16px;
+         line-height: 28px; /* Este valor se mantiene igual */
+     }
+ }
 
 .flow-text-p {
      font-family: 'Inter', sans-serif;
