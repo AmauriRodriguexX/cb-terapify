@@ -241,7 +241,7 @@ h5 {
 
 p,
 span {
-     font-family: 'Inter', sans-serif;
+     font-family: 'Inter', sans-serif !important;
      color: #252A2D;
      font-family: Inter;
      font-size: 18px;
@@ -1378,7 +1378,8 @@ input[type=number]::-webkit-inner-spin-button {
      margin-left: 39px;
      text-align: left;
      transform: translate(0px, -8px);
- }
+}
+
 .step-item::after {
      content: "";
      position: absolute;
@@ -1400,6 +1401,43 @@ input[type=number]::-webkit-inner-spin-button {
      }
 }
 
+/* Estilos para la versión escritorio (se muestra a partir de md) */
+@media (min-width: 768px) {
+
+     /* Contenedor general de cada paso (opcional si quieres algo extra) */
+     .step-desktop {
+          /* Ejemplo de margen o padding extra */
+          /* padding: 1rem 0; */
+     }
+
+     /* Círculo blanco con el número */
+     .circle-number {
+          width: 40px;
+          height: 40px;
+          background-color: #ffffff;
+          /* Círculo blanco */
+          color: #CE0058;
+          /* Color del número */
+          border-radius: 50%;
+          display: inline-flex;
+          /* Para centrar vertical y horizontalmente */
+          align-items: center;
+          justify-content: center;
+          font-size: 1.25rem;
+          font-weight: bold;
+          margin-bottom: 0.5rem;
+          /* Espacio entre el círculo y el título */
+          /* Opcional: si quieres un borde de color */
+          /* border: 2px solid #CE0058; */
+     }
+
+     /* Asegúrate de alinear el texto a la izquierda */
+     .text-left {
+          text-align: left;
+     }
+}
+
+
 .subtitle-12 {
      font-size: 18px;
      font-weight: 700;
@@ -1411,12 +1449,11 @@ input[type=number]::-webkit-inner-spin-button {
 
 .bk-color-gradient {
      background: linear-gradient(to bottom, #FAE6EE, #FFF1DA);
- }
- 
- /* En escritorio (pantallas mayores a 1024px), invertimos el gradiente */
- @media screen and (min-width: 1024px) {
+}
+
+/* En escritorio (pantallas mayores a 1024px), invertimos el gradiente */
+@media screen and (min-width: 1024px) {
      .bk-color-gradient {
-         background: linear-gradient(to bottom, #FFF1DA, #FAE6EE);
+          background: linear-gradient(to bottom, #FFF1DA, #FAE6EE);
      }
- }
- 
+}
