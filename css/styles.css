@@ -1294,6 +1294,7 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .step-badge {
+     font-family: 'Inter', sans-serif !important;
      font-size: 0.75rem;
      color: #CE0058;
      min-width: 60px;
@@ -1308,7 +1309,9 @@ input[type=number]::-webkit-inner-spin-button {
 
 .step-title {
      font-weight: 600;
-     font-size: 1rem;
+     font-size: 14px;
+     color: #252A2D;
+     font-family: 'Inter', sans-serif !important;
 }
 
 /* Ícono de Material a la derecha (add_circle) */
@@ -1455,11 +1458,18 @@ input[type=number]::-webkit-inner-spin-button {
 
 .bk-color-gradient {
      background: linear-gradient(to bottom, #FAE6EE, #FFF1DA);
-}
-
-/* En escritorio (pantallas mayores a 1024px), invertimos el gradiente */
-@media screen and (min-width: 1024px) {
+ }
+ 
+ /* En escritorio (pantallas mayores a 1024px), el gradiente irá de izquierda a derecha */
+ @media screen and (min-width: 1024px) {
      .bk-color-gradient {
-          background: linear-gradient(to bottom, #FFF1DA, #FAE6EE);
+         background: linear-gradient(120deg, #FBECF2, #FFF1DA);
      }
+ }
+ 
+
+.info-text {
+     color: #252A2D;
+     font-family: 'Inter', sans-serif !important;
+     font-size: 16px;
 }
