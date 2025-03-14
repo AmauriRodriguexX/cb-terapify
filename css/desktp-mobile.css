@@ -132,27 +132,28 @@
 /* ---- BOTONES PREV/NEXT ---- */
 .carousel-control-prev,
 .carousel-control-next {
-    position: static;
-    background: transparent;
-    border: none;
-    outline: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 0.5rem;
+     position: static;
+     background: transparent;
+     border: none;
+     outline: none;
+     width: 40px;
+     height: 40px;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin: 0 0.5rem;
 }
 
 /* Ajustamos el tamaño y alineación del ícono */
 .carousel-control-prev .material-symbols-outlined,
 .carousel-control-next .material-symbols-outlined {
-    font-size: 15px; /* Tamaño del icono */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-left: 6px;
+     font-size: 15px;
+     /* Tamaño del icono */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     padding-left: 6px;
 }
 
 .carousel-control-prev {
@@ -167,18 +168,18 @@
 
 .carousel-control-prev.disabled,
 .carousel-control-next.disabled {
-  opacity: 0.5;
-  pointer-events: none; 
-  background-color: #E0E0E0; 
-  color: #A0A0A0;
+     opacity: 0.5;
+     pointer-events: none;
+     background-color: #E0E0E0;
+     color: #A0A0A0;
 }
 
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  /* filter: invert(100%);  */
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
+     /* filter: invert(100%);  */
+     background-size: 20px 20px;
+     background-repeat: no-repeat;
 }
 
 
@@ -186,26 +187,41 @@
 
 @media (max-width: 768px) {
      .carousel-inner {
-       position: relative;
-       width: 100%;
-       display: flex;
-       overflow: hidden;
-       height: 225px;
+          position: relative;
+          width: 100%;
+          display: flex;
+          overflow: hidden;
+          height: 255px !important;
      }
-   }
-   
+}
+
 
 .red-icon {
      color: #CE0058;
 }
 
 .mi-transform {
-     transform: translate(10px, 50px); /* Mobile por defecto */
-   }
-   
-   @media (min-width: 992px) { /* Escritorio (lg) */
+     transform: translate(10px, 50px);
+     /* Mobile por defecto */
+}
+
+@media (min-width: 992px) {
+
+     /* Escritorio (lg) */
      .mi-transform {
-       transform: translate(10px, 100px);
+          transform: translate(10px, 100px);
      }
-   }
-   
+}
+
+
+/* Se muestra icono y texto por defecto (escritorio) */
+.regresar-text {
+     display: inline;
+}
+
+/* En mobile (por ejemplo, hasta 768px de ancho) se oculta el texto */
+@media (max-width: 768px) {
+     .regresar-text {
+          display: none;
+     }
+}
