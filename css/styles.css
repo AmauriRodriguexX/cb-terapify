@@ -558,6 +558,12 @@ section.no-border::after {
 }
 
 
+.link-button-back {
+     display: flex;
+     text-decoration: none;
+     color: #83786F;
+}
+
 
 .outlined-text-field,
 .filled-text-field,
