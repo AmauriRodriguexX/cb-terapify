@@ -188,6 +188,7 @@
      .carousel-inner {
        position: relative;
        width: 100%;
+       display: flex;
        overflow: hidden;
        height: 225px;
      }

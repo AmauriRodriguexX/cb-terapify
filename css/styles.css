@@ -1368,6 +1368,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .step-number {
+     font-family: 'Bree', sans-serif;
      position: absolute;
      top: 3px;
      left: 13px;
@@ -1457,15 +1458,28 @@ input[type=number]::-webkit-inner-spin-button {
 
 
 .bk-color-gradient {
-     background: linear-gradient(to bottom, #FAE6EE, #FFF1DA);
+     background: radial-gradient(
+         118.94% 141.42% at 0% 0%,
+         rgba(206, 0, 88, 0.00) 0%,
+         rgba(206, 0, 88, 0.10) 50.52%,
+         rgba(255, 163, 0, 0.10) 78.13%,
+         rgba(255, 163, 0, 0.00) 99.48%
+     );
  }
  
- /* En escritorio (pantallas mayores a 1024px), el gradiente irá de izquierda a derecha */
+ /* En escritorio (pantallas mayores a 1024px), el gradiente se mantiene */
  @media screen and (min-width: 1024px) {
      .bk-color-gradient {
-         background: linear-gradient(120deg, #FBECF2, #FFF1DA);
+         background: radial-gradient(
+             118.94% 141.42% at 0% 0%,
+             rgba(206, 0, 88, 0.00) 0%,
+             rgba(206, 0, 88, 0.10) 50.52%,
+             rgba(255, 163, 0, 0.10) 78.13%,
+             rgba(255, 163, 0, 0.00) 99.48%
+         );
      }
  }
+ 
  
 
 .info-text {
@@ -1473,3 +1487,27 @@ input[type=number]::-webkit-inner-spin-button {
      font-family: 'Inter', sans-serif !important;
      font-size: 16px;
 }
+
+.carousel {
+     display: flex;
+     justify-content: center; /* Centra los items */
+     align-items: center; /* Centra verticalmente (si es necesario) */
+     overflow: hidden; /* Para evitar scroll innecesario */
+     width: 100%;
+     position: relative;
+ }
+ 
+ .carousel-item {
+     position: relative;
+     display: none;
+     width: 95%; /* Ajusta el tamaño de los items */
+     max-width: 500px; /* Ajusta el máximo si es necesario */
+     margin: 0 auto; /* Centra horizontalmente */
+     -webkit-backface-visibility: hidden;
+     backface-visibility: hidden;
+     transition: transform 0.6s ease-in-out;
+ }
+ 
+ .carousel-item.active { 
+     display: block; /* Muestra el item activo */
+ }
